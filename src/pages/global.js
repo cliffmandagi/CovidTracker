@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { formatter } from "../utils/formatNum";
-import { Card } from "react-bootstrap";
 import Cards from "../components/Cards";
 
 const Global = () => {
@@ -25,10 +24,22 @@ const Global = () => {
   }, []);
 
   return (
-    <div>
-        <Cards/>
-      <h6>confirm: {formatter.format(world.confirmed)}</h6>
-      <h6>recovered: {formatter.format(world.recovered)}</h6>
+    <div className="row justify-content-center">
+      <Cards
+        variant="Success"
+        header="Recovered"
+        content={formatter.format(world.recovered)}
+      />
+      <Cards
+        variant="Danger"
+        header="Death"
+        content={formatter.format(world.death)}
+      />
+      <Cards
+        variant="Warning"
+        header="Confirmed"
+        content={formatter.format(world.confirmed)}
+      />
     </div>
   );
 };

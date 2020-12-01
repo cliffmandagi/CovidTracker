@@ -1,35 +1,21 @@
 import React from "react";
 import { Card } from "react-bootstrap";
 
-const Cards = () => {
-
-  let condition = (variant) => {
-    if(variant="Success"){
-      return "Recovered"
-    }
-    else if(variant="Danger"){
-      return "Death"
-    }
-    else if(variant="Warning"){
-      return "Confirmed"
-    }
-  }
+const Cards = ({variant, header, content}) => {
 
   return (
-    <div className="row justify-content-center">
-      {["Success", "Danger", "Warning"].map((variant) => (
-        <Card
-          bg={variant.toLowerCase()}
-          text={variant.toLowerCase() === "light" ? "dark" : "white"}
-          style={{ width: "18rem" }}
-          className="mb-2 text-center mr-2 ml-2 mt-3"
-        >
-          <Card.Header>{condition(variant)}</Card.Header>
-          <Card.Body>
-            <Card.Title>  </Card.Title>
-          </Card.Body>
-        </Card>
-      ))}
+    <div>
+      <Card
+        bg={variant.toLowerCase()}
+        text={variant.toLowerCase() === "light" ? "dark" : "white"}
+        style={{ width: "18rem" }}
+        className="mb-2 text-center ml-3 mt-3"
+      >
+        <Card.Header>{header}</Card.Header>
+        <Card.Body>
+          <Card.Title> {content} </Card.Title>
+        </Card.Body>
+      </Card>
     </div>
   );
 };
