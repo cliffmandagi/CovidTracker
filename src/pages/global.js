@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { formatter } from "../utils/formatNum";
+import { Card } from "react-bootstrap";
+import Cards from "../components/Cards";
 
 const Global = () => {
   const [world, setWorld] = useState({
@@ -24,9 +26,9 @@ const Global = () => {
 
   return (
     <div>
-      confirm: {formatter.format(world.confirmed)}
-      death: {formatter.format(world.death)}
-      recovered: {formatter.format(world.recovered)}
+        <Cards/>
+      <h6>confirm: {formatter.format(world.confirmed)}</h6>
+      <h6>recovered: {formatter.format(world.recovered)}</h6>
     </div>
   );
 };
