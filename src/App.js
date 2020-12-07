@@ -1,6 +1,5 @@
 import "./App.css";
-import Button from "react-bootstrap/Button";
-import { Navbar, Nav, Form, FormControl } from "react-bootstrap";
+import { Navbar, Nav } from "react-bootstrap";
 import { Switch, Route, BrowserRouter } from "react-router-dom";
 import global from "./pages/global";
 import indo from "./pages/indo";

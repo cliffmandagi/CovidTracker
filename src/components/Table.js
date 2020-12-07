@@ -1,6 +1,3 @@
-import react from "react";
-import { Table } from "react-bootstrap";
-
 const TableComp = ({ id, prov, posi, semb, meni }) => {
   return (
     <tbody>
