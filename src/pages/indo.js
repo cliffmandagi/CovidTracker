@@ -4,7 +4,7 @@ import { formatter } from "../utils/formatNum";
 import Cards from "../components/Cards";
 
 const Indo = () => {
-  const [indo, setWorld] = useState({
+  const [indo, setIndo] = useState({
     confirm: NaN,
     death: NaN,
     recovered: NaN,
@@ -14,7 +14,7 @@ const Indo = () => {
     axios
       .get("https://indonesia-covid-19.mathdro.id/api")
       .then((res) => {
-        setWorld({
+        setIndo({
           confirmed: res.data.perawatan,
           death: res.data.meninggal,
           recovered: res.data.sembuh,
