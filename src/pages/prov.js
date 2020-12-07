@@ -17,18 +17,19 @@ const Prov = () => {
   return (
     <div>
       <h2 className="text-center mt-2">Provinsi</h2>
-      <Table striped bordered hover>
-        <thead>
-          <tr>
-            <th>FID</th>
-            <th>Provinsi</th>
-            <th>Recovered</th>
-            <th>Death</th>
-            <th>Confirmed</th>
-          </tr>
-        </thead>
-        {prov.map((items) => {
-          return (
+      <div className="pl-4 pr-4 pt-2">
+        <Table striped bordered hover>
+          <thead>
+            <tr>
+              <th>FID</th>
+              <th>Provinsi</th>
+              <th>Recovered</th>
+              <th>Death</th>
+              <th>Confirmed</th>
+            </tr>
+          </thead>
+          {prov.map((items) => {
+            return (
               <TableComp
                 id={items.fid}
                 prov={items.provinsi}
@@ -36,9 +37,10 @@ const Prov = () => {
                 semb={items.kasusSemb}
                 meni={items.kasusMeni}
               />
-          );
-        })}
-      </Table>
+            );
+          })}
+        </Table>
+      </div>
     </div>
   );
 };
