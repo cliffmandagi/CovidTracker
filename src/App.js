@@ -19,14 +19,6 @@ function App() {
               <Nav.Link href="/indonesia">Indonesia</Nav.Link>
               <Nav.Link href="/provinsi">Provinsi</Nav.Link>
             </Nav>
-            <Form inline>
-              <FormControl
-                type="text"
-                placeholder="Search"
-                className="mr-sm-2"
-              />
-              <Button variant="outline-success">Search</Button>
-            </Form>
           </Navbar.Collapse>
         </Navbar>
         <Switch>

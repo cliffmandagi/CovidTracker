@@ -24,6 +24,8 @@ const Global = () => {
   }, []);
 
   return (
+    <>
+    <div className="justify-content-center"><h2 className="text-center mt-2">Global</h2></div>
     <div className="row justify-content-center">
       <Cards
         variant="Success"
@@ -41,6 +43,7 @@ const Global = () => {
         content={formatter.format(world.confirmed)}
       />
     </div>
+    </>
   );
 };
 
