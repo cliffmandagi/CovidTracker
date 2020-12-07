@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Table } from "react-bootstrap";
+import TableComp from "../components/Table";
 
 const Prov = () => {
   const [prov, setProv] = useState([]);
@@ -26,19 +27,17 @@ const Prov = () => {
             <th>Confirmed</th>
           </tr>
         </thead>
-      {prov.map((items) => {
-        return (
-          <tbody>
-            <tr>
-              <td>{items.fid}</td>
-              <td>{items.provinsi}</td>
-              <td>{items.kasusPosi}</td>
-              <td>{items.kasusSemb}</td>
-              <td>{items.kasusMeni}</td>
-            </tr>
-          </tbody>
-        );
-      })}
+        {prov.map((items) => {
+          return (
+              <TableComp
+                id={items.fid}
+                prov={items.provinsi}
+                posi={items.kasusPosi}
+                semb={items.kasusSemb}
+                meni={items.kasusMeni}
+              />
+          );
+        })}
       </Table>
     </div>
   );
